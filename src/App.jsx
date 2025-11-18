@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChatRoom from "./components/room/ChatRoom";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -45,10 +46,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-green-600">🎉 Joined!</h2>
-          <p className="text-gray-600 mt-2">You're now inside the chat room.</p>
-        </div>
+        <ChatRoom username={username} room={room} />
       )}
     </div>
   );
