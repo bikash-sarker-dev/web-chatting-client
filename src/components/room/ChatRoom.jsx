@@ -113,14 +113,19 @@ const ChatRoom = ({ username, room }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-semibold text-center mb-4 text-gray-800">
+        <h2 className="text-3xl font-semibold text-center mb-4 text-gray-800">
           Chat Room: {room} ({username})
         </h2>
 
         <div className="h-72 overflow-y-scroll mb-4 border border-gray-300 rounded-lg p-4 bg-gray-50">
           {messages.map((msg) => (
-            <div key={msg.id} className="flex flex-col mb-4">
-              <div className="text-sm text-gray-500">
+            <div
+              key={msg.id}
+              className={`flex flex-col mb-4 ${
+                username === msg.author ? "text-right" : ""
+              }`}
+            >
+              <div className="text-sm text-gray-500 ">
                 {msg.author} - {msg.time}
               </div>
               <div className="bg-gray-200 p-3 rounded-lg shadow-sm text-gray-800">
@@ -145,7 +150,7 @@ const ChatRoom = ({ username, room }) => {
           />
           <button
             onClick={sendMessage}
-            className="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             Send
           </button>
