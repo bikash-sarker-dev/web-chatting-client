@@ -116,7 +116,7 @@ const ChatRoom = ({ username, room }) => {
         <h2 className="text-4xl fon-bold text-center mb-4 text-gray-800">
           user Room Id: {room} ({username})
         </h2>
-
+        <p>this chatting application working</p>
         <div className="h-72 overflow-y-scroll mb-4 border border-gray-300 rounded-lg p-4 bg-gray-50">
           {messages.map((msg) => (
             <div
