@@ -114,9 +114,12 @@ const ChatRoom = ({ username, room }) => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-4xl fon-bold text-center mb-4 text-gray-800">
-          user Room Id: {room} ({username})
+          Room Id: {room} ({username})
         </h2>
-        <p>this chatting application working</p>
+        <p>
+          this chatting application workingthis chatting application workingthis
+          chatting application working
+        </p>
         <div className="h-72 overflow-y-scroll mb-4 border border-gray-300 rounded-lg p-4 bg-gray-50">
           {messages.map((msg) => (
             <div
