@@ -114,9 +114,9 @@ const ChatRoom = ({ username, room }) => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-4xl fon-bold text-center mb-4 text-gray-800">
-          Room Id: {room} ({username})
+          user Room Id: {room} ({username})
         </h2>
-       
+
         <div className="h-72 overflow-y-scroll mb-4 border border-gray-300 rounded-lg p-4 bg-gray-50">
           {messages.map((msg) => (
             <div
@@ -152,7 +152,7 @@ const ChatRoom = ({ username, room }) => {
             onClick={sendMessage}
             className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
-            Send
+            Send message
           </button>
         </div>
       </div>
